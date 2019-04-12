@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: default
+spec:
+  containers:
+  - name: busybox
+    image: registry.cn-shanghai.aliyuncs.com/yingzhuo/busybox:1.28.4
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
