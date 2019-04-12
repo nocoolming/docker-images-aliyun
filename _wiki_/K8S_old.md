@@ -3,31 +3,10 @@
 ```bash
 #!/usr/bin/env bash
 
-docker pull registry.cn-shanghai.aliyuncs.com/yingzhuo/coredns:1.3.1
-docker tag  registry.cn-shanghai.aliyuncs.com/yingzhuo/coredns:1.3.1 k8s.gcr.io/coredns:1.3.1
-docker rmi  registry.cn-shanghai.aliyuncs.com/yingzhuo/coredns:1.3.1
-
-docker pull registry.cn-shanghai.aliyuncs.com/yingzhuo/etcd:3.2.24 
-docker tag  registry.cn-shanghai.aliyuncs.com/yingzhuo/etcd:3.2.24 k8s.gcr.io/etcd:3.2.24
-docker rmi  registry.cn-shanghai.aliyuncs.com/yingzhuo/etcd:3.2.24
-
-docker pull registry.cn-shanghai.aliyuncs.com/yingzhuo/pause:3.1 
-docker tag  registry.cn-shanghai.aliyuncs.com/yingzhuo/pause:3.1 k8s.gcr.io/pause:3.1
-docker rmi  registry.cn-shanghai.aliyuncs.com/yingzhuo/pause:3.1
-
-docker pull registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-proxy:v1.13.5 
-docker tag  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-proxy:v1.13.5 k8s.gcr.io/kube-proxy:v1.13.5
-docker rmi  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-proxy:v1.13.5
-
-docker pull registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-scheduler:v1.13.5 
-docker tag  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-scheduler:v1.13.5 k8s.gcr.io/kube-scheduler:v1.13.5
-docker rmi  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-scheduler:v1.13.5
-
-docker pull registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-controller-manager:v1.13.5
-docker tag  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-controller-manager:v1.13.5 k8s.gcr.io/kube-controller-manager:v1.13.5
-docker rmi  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-controller-manager:v1.13.5
-
-docker pull registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-apiserver:v1.13.5 
-docker tag  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-apiserver:v1.13.5 k8s.gcr.io/kube-apiserver:v1.13.5
-docker rmi  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-apiserver:v1.13.5
+for IT in coredns:1.3.1 etcd:3.2.24 pause:3.1 kube-proxy:v1.13.5 kube-scheduler:v1.13.5 kube-controller-manager:v1.13.5 kube-apiserver:v1.13.5
+do
+    docker pull "registry.cn-shanghai.aliyuncs.com/yingzhuo/$IT"
+    docker tag  "registry.cn-shanghai.aliyuncs.com/yingzhuo/$IT" "k8s.gcr.io/$IT"
+    docker rmi  "registry.cn-shanghai.aliyuncs.com/yingzhuo/$IT"
+done
 ```
