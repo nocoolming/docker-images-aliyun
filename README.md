@@ -40,4 +40,4 @@ docker rmi  registry.cn-shanghai.aliyuncs.com/yingzhuo/kube-apiserver:v1.14.1
 
 ### 其他版本
 
-请参考[K8S_old.md](https://github.com/yingzhuo/docker-images-aliyun/_wiki_/K8S_old.md)
+请参考[K8S_old.md](_wiki_/K8S_old.md)
