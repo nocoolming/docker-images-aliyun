@@ -8,6 +8,10 @@
 kubectl apply -f "https://raw.githubusercontent.com/yingzhuo/docker-images-aliyun/master/_wiki_/busybox/busybox.yaml"
 ```
 
+### 调试
+
+例子:
+
 ```bash
 kubectl exec -it busybox ping localhost
 kubectl exec -it busybox nslookup <my-service>.<namespace>.svc.cluster.local
