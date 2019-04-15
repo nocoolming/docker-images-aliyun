@@ -6,6 +6,6 @@ metadata:
 spec:
   containers:
   - name: busybox
-    image: registry.cn-shanghai.aliyuncs.com/yingzhuo/busybox:1.28.4
+    image: registry.cn-shanghai.aliyuncs.com/yingzhuo/busybox:latest
     imagePullPolicy: IfNotPresent
   restartPolicy: Always
